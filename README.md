@@ -18,6 +18,8 @@
 
 只要点击tag 下载模块即可
 
+需要注意 在新版kernelsu或其衍生版本中 默认情况下不会修改系统文件 需要安装[这个东西](https://github.com/KernelSU-Modules-Repo/meta-overlayfs/releases) 才可以
+
 ## 许可条款
 
 该项目只用于学习和讨论使用，请遵守您所在地区的法律法规
