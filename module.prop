@@ -1,6 +1,7 @@
 id=noto-color-emoji-flags
-name=Noto Color Emoji Flags 16.0.9.504
-version=0.1
+name=Noto Color Emoji Flags 16.0.9.402
+version=0.0.2
 versionCode=1
 author=MoAEIOU
-description=Restore Taiwan flag bitmap in NotoColorEmojiFlags.ttf |
+description=Restore Taiwan flag bitmap in NotoColorEmojiFlags.ttf
+support=https://github.com/moaeiou/colorosshowtw
