@@ -1,0 +1,36 @@
+name: I just think you of I
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Smile
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Get version
+        id: get_version
+        shell: bash
+        run: echo "version=$(grep '^version=' ./module.prop | cut -d'=' -f2)" >> "$GITHUB_OUTPUT"
+
+      - name: Build!
+        shell: bash
+        run: zip -r colorosshowtw-v${{ steps.get_version.outputs.version }}.zip module.prop system/
+
+      - name: Release
+        uses: softprops/action-gh-release@master
+        with:
+          tag_name: V${{ steps.get_version.outputs.version }}
+          files: colorosshowtw-v${{ steps.get_version.outputs.version }}.zip
+          body: |
+            # 📝 Release Note
+            - Fixes and improvements
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

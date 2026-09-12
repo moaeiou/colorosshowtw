@@ -1,7 +1,6 @@
-id=noto-color-emoji-flags
-name=Noto Color Emoji Flags 16.0.9.402
-version=0.0.2
+id=ColorOS-Show-TW
+name=ColorOS-show-ROC-flag
+version=0.0.3
 versionCode=1
 author=MoAEIOU
-description=Restore Taiwan flag bitmap in NotoColorEmojiFlags.ttf
-support=https://github.com/moaeiou/colorosshowtw
+description=Change NotoColorEmojiFlags.ttf to ColorOS 16.0.9.403 URL:https://github.com/moaeiou/colorosshowtw
