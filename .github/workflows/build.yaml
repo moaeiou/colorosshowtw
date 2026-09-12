@@ -40,8 +40,7 @@ jobs:
           body: |
             # 📝 更新日志
             - 修复和改进
-            - 支持直接在管理器中更新本模块
-            - 为更新添加github代理
+            - 测试更新能否成功
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
