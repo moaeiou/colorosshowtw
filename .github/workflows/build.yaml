@@ -38,8 +38,10 @@ jobs:
           tag_name: v${{ steps.get_version.outputs.version }}
           files: colorosshowtw-v${{ steps.get_version.outputs.version }}.zip
           body: |
-            # 📝 Release Notes
-            - Fixes and improvements
+            # 📝 更新日志
+            - 修复和改进
+            - 支持直接在管理器中更新本模块
+            - 为更新添加github代理
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -53,7 +55,7 @@ jobs:
           {
             "version": "v${VERSION}",
             "versionCode": ${VERSION_CODE},
-            "zipUrl": "https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
+            "zipUrl": "https://gh.llkk.cc/https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
             "changelog": "https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
           }
           EOF

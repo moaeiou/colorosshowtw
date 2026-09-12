@@ -1,6 +1,6 @@
 id=ColorOS-Show-TW
 name=ColorOS-show-ROC-flag
-version=0.0.4
+version=0.0.5
 versionCode=1
 author=MoAEIOU
 description=Change NotoColorEmojiFlags.ttf to ColorOS 16.0.9.403 URL:https://github.com/moaeiou/colorosshowtw

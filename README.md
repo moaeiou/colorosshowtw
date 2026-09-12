@@ -8,6 +8,8 @@
 
 安装[这个东西](https://github.com/KernelSU-Modules-Repo/meta-overlayfs/releases) 才可以
 
+同时还要关闭KernelSU系应用中的“默认卸载模块” 否则模块会不生效
+
 [点击这里下载](https://github.com/moaeiou/colorosshowtw/releases)
 
 ## 项目简介
