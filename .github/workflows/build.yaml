@@ -30,7 +30,7 @@ jobs:
           tag_name: V${{ steps.get_version.outputs.version }}
           files: colorosshowtw-v${{ steps.get_version.outputs.version }}.zip
           body: |
-            # 📝 Release Note
+            # 📝 Release Notes
             - Fixes and improvements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
