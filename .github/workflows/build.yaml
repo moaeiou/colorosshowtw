@@ -2,6 +2,8 @@ name: I just think you of I
 
 on:
   push:
+    paths-ignore:
+      - 'update.json'
   workflow_dispatch:
 
 permissions:
@@ -18,19 +20,49 @@ jobs:
       - name: Get version
         id: get_version
         shell: bash
-        run: echo "version=$(grep '^version=' ./module.prop | cut -d'=' -f2)" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(grep '^version=' ./module.prop | cut -d'=' -f2)
+          VERSION_CODE=$(grep '^versionCode=' ./module.prop | cut -d'=' -f2)
+
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "version_code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
 
       - name: Build!
         shell: bash
-        run: zip -r colorosshowtw-v${{ steps.get_version.outputs.version }}.zip module.prop system/
+        run: |
+          zip -r colorosshowtw-v${{ steps.get_version.outputs.version }}.zip module.prop system/
 
       - name: Release
         uses: softprops/action-gh-release@master
         with:
-          tag_name: V${{ steps.get_version.outputs.version }}
+          tag_name: v${{ steps.get_version.outputs.version }}
           files: colorosshowtw-v${{ steps.get_version.outputs.version }}.zip
           body: |
             # 📝 Release Notes
             - Fixes and improvements
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update update.json
+        shell: bash
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
+          VERSION_CODE="${{ steps.get_version.outputs.version_code }}"
+
+          cat > update.json <<EOF
+          {
+            "version": "v${VERSION}",
+            "versionCode": ${VERSION_CODE},
+            "zipUrl": "https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
+            "changelog": "https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
+          }
+          EOF
+
+          cat update.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add update.json
+          git commit -m "Bump update.json version"
+          git push
