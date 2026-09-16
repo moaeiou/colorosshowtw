@@ -40,7 +40,6 @@ jobs:
           body: |
             # 📝 更新日志
             - 修复和改进
-            - 测试更新能否成功
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

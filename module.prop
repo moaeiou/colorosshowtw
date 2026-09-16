@@ -1,7 +1,7 @@
 id=ColorOS-Show-TW
-name=ColorOS-show-ROC-flag
-version=0.0.6
+name=ColorOS-show-TW-flag
+version=0.0.7
 versionCode=1
 author=MoAEIOU
-description=将emoji字体替换为ColorOS 16.0.9.403版本的 项目地址:https://github.com/moaeiou/colorosshowtw
+description=将emoji字体替换为ColorOS 16.0.9.403版本 项目地址:https://github.com/moaeiou/colorosshowtw
 updateJson=https://raw.githubusercontent.com/moaeiou/colorosshowtw/main/update.json
