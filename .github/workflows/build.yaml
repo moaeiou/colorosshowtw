@@ -51,7 +51,7 @@ jobs:
 
           cat > update.json <<EOF
           {
-            "version": "v${VERSION}",
+            "version": "${VERSION}",
             "versionCode": ${VERSION_CODE},
             "zipUrl": "https://gh.llkk.cc/https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
             "changelog": "https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
