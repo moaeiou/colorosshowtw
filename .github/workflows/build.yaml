@@ -53,7 +53,7 @@ jobs:
           {
             "version": "${VERSION}",
             "versionCode": ${VERSION_CODE},
-            "zipUrl": "https://gh.llkk.cc/https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
+            "zipUrl": "https://github.com/${{ github.repository }}/releases/download/v${VERSION}/colorosshowtw-v${VERSION}.zip",
             "changelog": "https://github.com/${{ github.repository }}/releases/tag/v${VERSION}"
           }
           EOF
