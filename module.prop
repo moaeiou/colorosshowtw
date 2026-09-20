@@ -1,7 +1,7 @@
 id=ColorOS-Show-TW
 name=ColorOS-show-TW-flag
-version=0.0.9
-versionCode=9
+version=0.1.0
+versionCode=10
 author=MoAEIOU
-description=将emoji字体替换为ColorOS 16.0.9.403版本
+description=让ColorOS显示🇹🇼(中华民国)国旗
 updateJson=https://raw.githubusercontent.com/moaeiou/colorosshowtw/main/update.json
