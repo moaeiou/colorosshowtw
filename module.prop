@@ -1,7 +1,7 @@
 id=ColorOS-Show-TW
-name=ColorOS-show-TW-flag
-version=0.1.0
-versionCode=10
+name=ColorOS-show-TW
+version=0.1.1
+versionCode=11
 author=MoAEIOU
 description=让ColorOS显示🇹🇼(中华民国)国旗
 updateJson=https://raw.githubusercontent.com/moaeiou/colorosshowtw/main/update.json
