@@ -46,6 +46,7 @@ jobs:
       - name: Update update.json
         shell: bash
         run: |
+          rm .gitignore
           VERSION="${{ steps.get_version.outputs.version }}"
           VERSION_CODE="${{ steps.get_version.outputs.version_code }}"
 
