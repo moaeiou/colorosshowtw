@@ -8,11 +8,13 @@
 
 为了解决这个问题 需要安装[这个东西](https://github.com/Hybrid-Mount/meta-hybrid_mount) 
 
-然后打开 选择我的模块 overlayfs即可
+然后打开 选择我的模块 挂载选项选择`Hybrid Mount`
 
 如果你是KernelSU系管理器 需要关闭设置中的“默认卸载模块” 否则模块会不生效
 
 最后 像安装普通模块一样安装这个模块 [点击这里下载此模块](https://github.com/moaeiou/colorosshowtw/releases)
+
+就可以愉快的享用了
 
 ## 项目简介
 
@@ -33,3 +35,7 @@ ColorOS由于监管要求 从16.0.10版本开始将不显示🇹🇼(TW)
 作者不对使用该项目产生的一切后果承担责任
 
 除此之外 项目使用AGPL-v3.0授权
+
+字体根据Google的相关条款使用OFL许可授权
+
+详细请参阅LICENSE文件
